@@ -1,6 +1,10 @@
-const WORDLIST =[
-    "Amazing", "Amazed", "Annoying", "Annoyed", "Boring", "Bored", "Confusing", "Confused", 
-    "Exciting", "Excited", "Shocking", "Shocked", "Fascinating", "Fascinated", "Tiring", "Tired"
+const WORDLIST = [
+    "Amazing", "Annoying", "Boring", "Confusing",
+    "Depressing", "Disappointing", "Embarrassing", "Encouraging",
+    "Entertaining", "Exciting", "Exhausting", "Fascinating",
+    "Frightening", "Frustrating", "Inspiring", "Interesting",
+    "Overwhelming", "Relaxing", "Satisfying", "Shocking",
+    "Surprising", "Terrifying", "Tiring"
 ];
 
 const appearedOnce = []
@@ -24,7 +28,7 @@ const createReel = (list, index) => {
     reel.setAttribute('class', 'reel')
 
     wordNodes = list.map(word => {
-        const wordNode = document.createElement('p');
+        const wordNode = document.createElement('li');
         wordNode.textContent = word
         reel.appendChild(wordNode)
     })
@@ -50,9 +54,9 @@ const getNewReel = () => {
     const slotWindow = document.getElementById('slot-window');
     const thisList = getAdjustedList(WORDLIST, randomWord(WORDLIST))
     const reel = createReel(thisList)
+    reel.style.animation = "spin 1.5s cubic-bezier(0.2, 1, 0.3, 1) forwards"; // Adding animation
     slotWindow.appendChild(reel)
 }
 
 const spinButton = document.getElementById("spin")
 spinButton.addEventListener("click", getNewReel)
-
