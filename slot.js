@@ -1,10 +1,5 @@
 const WORDLIST = [
-    "Amazing", "Annoying", "Boring", "Confusing",
-    "Depressing", "Disappointing", "Embarrassing", "Encouraging",
-    "Entertaining", "Exciting", "Exhausting", "Fascinating",
-    "Frightening", "Frustrating", "Inspiring", "Interesting",
-    "Overwhelming", "Relaxing", "Satisfying", "Shocking",
-    "Surprising", "Terrifying", "Tiring"
+"Funny", "Exciting","Scary","Interesting","Boring","Popular","Realistic","Entertaining","Emotional","Creative","Dramatic"
 ];
 
 const appearedOnce = []
